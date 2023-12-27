@@ -15,7 +15,7 @@ function main() {
 }
 
 function addUser() {
-  if (nameValidation() && mailValidation() && passValidation()) {
+  if (nameValidation() && mailValidation() && passValidation()&&mailEntering()!=true) {
     var data = {
       name: username.value,
       mail: suEmail.value,
@@ -73,7 +73,7 @@ function mailEntering() {
     if (suEmail.value == signupData[x].mail) {
       document.getElementById("validmail").classList.remove("d-none");
 
-      return  
+      return true
     }
   }
   document.getElementById("validmail").classList.add("d-none");
