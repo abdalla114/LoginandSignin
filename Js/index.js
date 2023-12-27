@@ -27,7 +27,8 @@ function addUser() {
     document.getElementById("warning-msg").classList.add("d-none");
     refillsu();
     window.location = "index.html";
-  } else {
+  } 
+  else {
     document.getElementById("warning-msg").classList.remove("d-none");
     document.getElementById("success-msg").classList.add("d-none");
   }
@@ -71,10 +72,11 @@ function mailEntering() {
   for (var x = 0; x < signupData.length; x++) {
     if (suEmail.value == signupData[x].mail) {
       document.getElementById("validmail").classList.remove("d-none");
-    } else {
-      document.getElementById("validmail").classList.add("d-none");
+
+      return  
     }
   }
+  document.getElementById("validmail").classList.add("d-none");
 }
 
 function passValidation() {
